@@ -46,9 +46,33 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Acá va tu código */
 #ejercicioCinco {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-items: center;
+    
 }
 
 
 /* Ejercicio 6. */
+#ejercicioCinco {
+    flex-direction: row-reverse;
+}
+
+#ejercicioSiete {
+    flex-direction: row-reverse;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#elementoCuatro {
+    align-self: flex-start;
+}
+
+#elementoDos {
+    align-self: flex-start;
+}
+
+#elementoUno {
+    align-self: flex-end;
+}
