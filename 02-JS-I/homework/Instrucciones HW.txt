@@ -1,0 +1,12 @@
+Variables:
+Una forma de almacenar el valor de algo. Generalmente se usa para aplicar ese valor más tarde. Se declara con la palabra clave "Var" y se le asigna valor mediante el "="
+
+Anatomia: var nombre = 'tobias'
+
+La palabra clave tambien puede ser "const" en caso de que quieras que esa variable no cambie en ninguna parte del codigo. Si usas "var" para asignarle valor a nombre = 'tobias' pero despues escribis: var nombre = 'matias', la variable se va a sobreescribir
+
+Strings:
+Valores de texto asignados a las variables. Todo lo que este entre comillas dentro de una variable es considerado una string
+
+
+ 
