@@ -72,6 +72,11 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (str1.length === str2.length) {
+    return true;
+  } else {
+    return false;
+  }
   
   
 }
@@ -111,8 +116,8 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 === 0) {return true}; 
-  else {return false};
+  if (num % 2 === 0) {return true;}
+  else {return false;}
   
 }
 
@@ -120,8 +125,8 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 != 0) {return true};
-  else {return false};
+  if (num % 2 != 0) {return true;}
+  else {return false;}
 }
 
 function elevarAlCuadrado(num) {
@@ -163,7 +168,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  var num = 
+  return Math.random ();
 
 }
 
@@ -172,8 +177,8 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero > 0) {return 'Es positivo'};
-  if (numero < 0) {return 'Es negativo'};
+  if (numero > 0) {return 'Es positivo';}
+  if (numero < 0) {return 'Es negativo';}
   else {return false};
   
 }
@@ -242,8 +247,15 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra = 'a', 'e', 'i', 'o', 'u') {return 'Es vocal'};
-  else {return 'Dato incorrecto'};
+  if (letra.length > 1) {
+    return 'Dato incorrecto';
+  };
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'){
+    return 'Es vocal';
+  }
+
+  else {return 'Dato incorrecto';}
+
 }
 
 
