@@ -1,0 +1,8 @@
+For:
+Un bucle incorporado a JavaScript que ejecuta la misma funcion una y otra vez hasta obtener el resultado esperado 
+o se detiene si no se cumple el condicional
+Anatomía: Declaración de variable, condicional, incremento de variable con ++
+
+Operadores lógicos:
+Si tenemos más de dos expresiones dentro de la misma función, se pueden utilizar estos operadores para determinar 
+que la función será ejecutada si ambas (&&), alguna (||), o ninguna (!) de las expresiones son correctas.
