@@ -151,7 +151,7 @@ function operadoresLogicos(num1, num2, num3) {
     return 'Error';
   } else if  (num1 < 0 || num2 < 0 || num3 < 0) {
     return 'Hay negativos';
-  } else if (num1 > num2 || num1 > num3 && num1 > 0) {
+  } else if (num1 > num2 && num1 > num3 && num1 > 0) {
   return 'Número 1 es mayor y positivo';
   } else if (num3 > num1 && num3 > num2) {
     return num3 + 1;
@@ -204,10 +204,10 @@ function tieneTresDigitos(numero) {
   //Escribe tu código aquí
   if (numero >= 100 && numero < 1000) {
     return true
-  }
+  } else {
   return false
 }
-
+}
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
