@@ -179,7 +179,7 @@ function mesesDelAño(array) {
   // Tu código:
   var arrayMeses = [];
 
-  for (var i = 0; i < array.length; i++); {
+  for (var i = 0; i < array.length; i++) {
     if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
       arrayMeses.push(array[i]);
     }
@@ -187,7 +187,9 @@ function mesesDelAño(array) {
 
   if (arrayMeses.length < 3) {
     return 'No se encontraron los meses pedidos';
-  } else {return arrayMeses;}
+  } else {
+    return arrayMeses;
+  }
 }
 
 function mayorACien(array) {
