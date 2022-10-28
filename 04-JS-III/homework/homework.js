@@ -119,6 +119,16 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
+   let nuevoArray = numeros[0];
+
+   for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] > nuevoArray) {
+      nuevoArray = numeros[i];
+    }
+   }
+
+   return nuevoArray;
 }
 
 function multiplicarArgumentos() {
@@ -131,7 +141,15 @@ function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+  let nuevoArray = 0;
 
+  for (let i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] > 18) {
+      nuevoArray++
+    } 
+    
+  }
+ return nuevoArray;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -140,6 +158,9 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario.
   //Escribe tu código aquí
 
+  if (numeroDeDia === 1 || numeroDeDia === 7) {return 'Es fin de semana';}
+  else {return 'Es dia Laboral';}
+
   
 }
 
@@ -147,7 +168,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  let strNum = n.toString();
 
+  if (strNum.charAt(0) === '9') {return true;}
+
+  return false;
 }
 
 function todosIguales(arreglo) {
@@ -163,6 +188,12 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+
+  let meses = []
+
+  for (let i = 0; i < array.length; i++) {
+    
+  }
  
 }
 
