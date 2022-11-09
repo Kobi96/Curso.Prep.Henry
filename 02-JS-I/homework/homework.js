@@ -1,22 +1,23 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "Hola";
+const nuevaString = "Hola"; //Variable string siempre se declara usando comillas
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 12;
+const nuevoNum = 12; // numero se declara sin comillas
 
 // Crea una variable booleana:
-const nuevoBool = true;
+const nuevoBool = true; //booleana significa true or false
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - 5 === 5;
+const nuevaResta = 10 - 5 === 5; // Siempre que sea una operacion matematica, se usan tres iguales. 
+                                //Se usa un igual solo cuando se esta declarando
 
 // Resuelve el siguiente problema matemático:
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 1;
+const nuevoModulo = 21 % 5 === 1; // % significa el resto, no la division
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -28,14 +29,14 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  return str;
+  return str; // Se usa punto y coma para cerrar una linea de codigo
 }
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  return (x+y);
+  return (x+y); // Si hay mucho codigo otra solucion es let sum = x + y; return sum
 }
 
 function resta(x, y) {
@@ -60,7 +61,7 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (x === y) { return true;} 
+  if (x === y) { return true;} // Aplicamos un condicional para declarar una codicion
   else {return false;}
 }
 
@@ -68,8 +69,11 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
- if (str1.length === str2.length) {return true;}
+ if (str1.length === str2.length) {return true;} // .length determina la longitud de un valor string
  else {return false;}
+
+ //Otra posibilidad
+ // return str1.length === str2.length porque va a devolver un valor boolean
   
 }
 
@@ -100,6 +104,10 @@ function obtenerResto(x, y) {
 
   return (x % y);
 
+  // 9 == '9' ----> True
+  // 9 === '9' ----> False
+  //Por esto se usan los 3 iguales
+
 }
 
 function esPar(num) {
@@ -121,6 +129,10 @@ function esImpar(num) {
   if (num % 2 === 0) {return false;}
   else {return true;}
 
+  // Otra posibilidad:
+  // if (num % 2 === 1) {return true;}
+  // else {return false;}
+
 }
 
 function elevarAlCuadrado(num) {
@@ -129,7 +141,8 @@ function elevarAlCuadrado(num) {
   // Tu código:
 
   return num * num;
-  
+  // Otra posibilidad
+  //Math.pow (num, 2); Math.pow toma un valor y lo eleva a una determinada potencia
 }
 
 function elevarAlCubo(num) {
@@ -149,20 +162,21 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-   return Math.round(num);
+   return Math.round(num); //Math.round determina el numero entero mas cercano y lleva la variable a ese valor
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return Math.ceil(num);
+  return Math.ceil(num); // Math.ceil determina el numero entero superior mas cercano
+                        // y lleva la variable a ese valor
   
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return Math.random();
+  return Math.random(); // Math.random ofrece un numero al azar entre 0 y 1. No es un numero entero
 
 }
 
@@ -192,7 +206,7 @@ function combinarNombres(nombre, apellido) {
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
 
-  return (nombre + " " + apellido);
+  return (nombre + " " + apellido); // el espacio entre las palabras cuenta como un caracter
   
 }
 
@@ -207,7 +221,7 @@ function obtenerSaludo(nombre) {
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  return (alto * ancho) 
+  return (alto * ancho); 
 }
 
 
@@ -244,6 +258,9 @@ function esVocal(letra){
   //Escribe tu código aquí
  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {return 'Es vocal';}
  else {return 'Dato incorrecto';}
+
+ //Otra posibilidad
+ // if (letra.length > 1) {return 'Dato Incorrecto';}
 
 }
 
