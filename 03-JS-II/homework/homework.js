@@ -31,7 +31,8 @@ function conection(status) {
   else if (status === 2) {return 'Away';}
   else {return 'Offline';}
 
-
+  // Otra posibilidad:
+  // Usar Switch
 }
 
 function saludo(idioma) {
@@ -46,6 +47,8 @@ function saludo(idioma) {
   else if (idioma === 'mandarin') {return 'Ni Hao!';}
   else if (idioma === 'ingles') {return 'Hello!';}
   else {return 'Hola!';}
+
+  // Otra posibilidad:
 
 
 }
@@ -63,6 +66,13 @@ function colors(color) {
   else if (color === 'green') {return 'This is green';}
   else if (color === 'orange') {return 'This is orange';}
   else {return 'Color not found';}
+
+  // Otra posibilidad:
+   // Switch (color) {
+   // case 'blue':
+   // return 'this is blue';
+   // break;
+   
 }
 
 function esDiezOCinco(numero) {
@@ -91,6 +101,8 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+
+       // 5.3             ===   5
    if (Math.floor(numero) === numero) {return true;}
    else {return false;}
 }
@@ -133,11 +145,17 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+
+
+  // El for es una funcion iterable, se puede usar fuera de arrays
 if (numero <= 1) {return false;}
 else if (numero === 2) {return true;}
-
+// numero = 20
 for (i = 2; i < numero; i++) {
-  if (numero % i === 0) {return false;}
+  if (numero % i === 0) {return false;} // Se itera desde el 2 al 20 sin contar 20
+                                        // Bajo esa logica, si un numero anterior a 20 se puede dividir por 20
+                                        // y dar un numero entero, entonces no puede ser un numero primo porque es divisible por
+                                        // mas numeros fuera de el mismo y 1. Por lo tanto, 20 no es primo 
 }
 
 return true;
@@ -149,7 +167,7 @@ function esVerdadero(valor) {
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
 
-  if (valor === true) {return 'Soy verdadero';}
+  if (valor === true) {return 'Soy verdadero';} // Si solo se aplica el return tambien se puede no usar llaves
   else {return 'Soy falso';}
 
 }
@@ -162,6 +180,7 @@ function tablaDelSeis() {
   let tablaDelSeis = [];
 
   for (i = 0; i < 11; i++) {
+    // 6 * i = 0, lo pusheas atroden y asi y asi
     tablaDelSeis.push(6 * i);
   }
   
@@ -176,21 +195,30 @@ function tieneTresDigitos(numero) {
   if (numero > 99 && numero < 999) {return true;}
   else {return false;}
 
+  // Otra posibilidad
+  // if (numero.toString().length) === 3
+
 }
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  
+
+  // suponiendo que es 10 el numero
 
    let num = numero;
-   let parametro = 0;
+   let parametro = 0; // se establece el parametro mediante el cual se va a iterar
 
    do {
-    parametro = parametro + 1;
-    num = num + 5;
+    parametro = parametro + 1; 
+    num = num + 5; // se establece la funcion que se va a realizar
    }
 
-   while (parametro < 8);
+   while (parametro < 8); //se itera del 0 al 7 
+                          //(tambien podemos establecer el parametro como 1 y que el while sea menor a 9)
+
+   // 10 +5 +5 +5 +5 +5 +5 +5 +5
 
    return num;
 
