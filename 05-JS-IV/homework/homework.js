@@ -9,7 +9,7 @@ function crearGato(nombre, edad) {
 
   const crearGato = {
 
-    nombre: nombre ,
+    nombre: nombre , // si el argumento y el valor son lo mismo tambien se puede ' nombre, 'y el siguiente 
     edad: edad ,
     meow: function () {
       return "Meow!";
@@ -26,7 +26,7 @@ function agregarPropiedad(objeto, property) {
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
 
-  objeto[property] = null;
+  objeto[property] = null; // dot notation solo se usa cuando la propiedad existe
 
   return objeto;
 
@@ -51,6 +51,12 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   
   return multiplicacion;
 
+  //
+
+  //objetoMisterioso {
+    //numeroMisterioso: X valor
+  //}
+
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -72,9 +78,9 @@ function nuevoUsuario(nombre, email, password) {
 
   const nuevoObjeto = {
 
-    nombre: nombre ,
-    email: email ,
-    password: password
+    nombre,
+    email,
+    password,
 
 };
 return nuevoObjeto;
@@ -85,12 +91,12 @@ function tieneEmail(usuario) {
   // De lo contratio, devuelve "false"
   // Tu código:
 
-  for (let clave in usuario) {
+  
     if (usuario.email) {
       return true
     } else {return false;}
-  }
-
+  
+  
 }
 
 
@@ -101,12 +107,12 @@ function tienePropiedad(objeto, propiedad) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  for (let clave in objeto) {
     if (objeto[propiedad]) {
       return true
     } else {return false;}
-  }
-
+  
+ // Otra manera:
+ // objeto.hasOwnPropery(propiedad);
 }
 
 function verificarPassword(usuario, password) {
@@ -115,16 +121,15 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // // Tu código:
 
-  for (let clave in usuario) {
     if (usuario['password'] === password) {
       return true
     } else {return false;}
-  }
+  
 
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
-  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
 
@@ -149,7 +154,8 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-
+// ben, ryan, michael, johnny
+//                    i =>
 for (var i = 0; i < usuarios.length; i++) {
   usuarios[i].esPremium = true;
 }
