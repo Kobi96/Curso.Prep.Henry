@@ -62,8 +62,7 @@ function sonIguales(x, y) {
   // Tu código:
   if (x === y) {
     return true;
-  } // Aplicamos un condicional para declarar una codicion
-  else {
+  } else {
     return false;
   }
 }
@@ -74,8 +73,7 @@ function tienenMismaLongitud(str1, str2) {
   // Tu código:
   if (str1.length === str2.length) {
     return true;
-  } // .length determina la longitud de un valor string
-  else {
+  } else {
     return false;
   }
 
@@ -111,7 +109,6 @@ function obtenerResto(x, y) {
   // Tu código:
 
   return x % y;
-
   // 9 == '9' ----> True
   // 9 === '9' ----> False
   //Por esto se usan los 3 iguales
@@ -121,7 +118,6 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-
   if (num % 2 === 0) {
     return true;
   } else {
