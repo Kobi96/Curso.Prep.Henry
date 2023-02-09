@@ -21,6 +21,17 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   //Escribe tu código aquí
+
+  let obj = {};
+
+  for (let i = 0; i < string.length; i++) {
+    if (obj[string[i]]) {
+      obj[string[i]]++;
+    } else {
+      obj[string[i]] = 1;
+    }
+  }
+  return obj;
 }
 
 function capToFront(s) {
@@ -90,12 +101,31 @@ function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
+  let nuevaCadena = "";
+
+  for (let i = 0; i < cadena.length; i++) {
+    if (
+      cadena.charAt(i) !== "a" &&
+      cadena.charAt(i) !== "b" &&
+      cadena.charAt(i) !== "c"
+    ) {
+      nuevaCadena = nuevaCadena + cadena.charAt(i);
+    }
+  }
+
+  return nuevaCadena;
 }
 
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+
+  arr.sort(function (a, b) {
+    return a.length - b.length;
+  });
+  return arr;
 }
 
 function buscoInterseccion(arreglo1, arreglo2) {
@@ -104,6 +134,16 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí
+
+  let interseccion = [];
+
+  for (let i = 0; i < arreglo1.length; i++) {
+    if (arreglo2.includes(arreglo1[i])) {
+      interseccion.push(arreglo1[i]);
+    }
+  }
+
+  return interseccion;
 }
 
 // No modificar nada debajo de esta línea
